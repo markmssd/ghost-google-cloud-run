@@ -3,11 +3,14 @@
 # Ensure $GCLOUD_PROJECT_ID is set
 : "${GCLOUD_PROJECT_ID?"Need to set GCLOUD_PROJECT_ID"}"
 
+IMAGE=ghost-google-cloud-run
+TAG=1.0
+
 # Build
-docker build --tag ghost-google-cloud-run:1.0 .
+docker build --tag $IMAGE:$TAG .
 
 # Tag
-docker tag ghost-cloud-run:1.0 gcr.io/$GCLOUD_PROJECT_ID/ghost-google-cloud-run:1.0
+docker tag $IMAGE:$TAG gcr.io/$GCLOUD_PROJECT_ID/$IMAGE:$TAG
 
 # Push
-docker push gcr.io/$GCLOUD_PROJECT_ID/ghost-google-cloud-run:1.0
+docker push gcr.io/$GCLOUD_PROJECT_ID/$IMAGE:$TAG
