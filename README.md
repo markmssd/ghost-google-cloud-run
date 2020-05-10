@@ -1,5 +1,7 @@
 # Run Ghost on Google Cloud Run
 
+![Ghost on Google Cloud](https://repository-images.githubusercontent.com/262830411/43b05c00-92c7-11ea-83bd-379da3c37361)
+
 ## Instructions
 
 By default, Ghost uses a local SQLite database, and the filesystem as a storage.
