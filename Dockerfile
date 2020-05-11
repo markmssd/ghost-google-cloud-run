@@ -1,5 +1,5 @@
 # https://hub.docker.com/_/ghost/
-FROM ghost:3.15.1
+FROM ghost:3.15.1-alpine
 
 # Needs to be in versions/<version>/core/server/adapters
 ENV GHOST_STORAGE $GHOST_INSTALL/versions/$GHOST_VERSION/core/server/adapters/storage
